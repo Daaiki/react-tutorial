@@ -1,16 +1,13 @@
 import Link from 'next/link'
-import Head from 'next/head'
+import Layout from '../components/Layout'
 
 const IndexPage = () => {
   return (
-    <>
-      <Head>
-        <title>Create React App</title>
-      </Head>
+    <Layout title="Create React App">
       <h1>
         Read <Link href="/posts/first-post"><a>this page</a></Link> 
       </h1>
-    </>
+    </Layout>
   )
 }
 
