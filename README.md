@@ -1,3 +1,3 @@
 # [React Tutorial](https://ja.reactjs.org/)
 
-Repository to study react while learning typescript.
+Repository for learning React with TypeScript.
