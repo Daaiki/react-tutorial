@@ -1,7 +1,11 @@
+import Link from 'next/link'
+
 const IndexPage = () => {
   return (
     <>
-      <h1>Hello, World</h1>
+      <h1>
+        Read <Link href="/posts/first-post"><a>this page</a></Link> 
+      </h1>
     </>
   )
 }
