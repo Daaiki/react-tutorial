@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import { getSortedPostsData } from '../lib/posts'
-import { Posts } from '../types/types'
+import { AllPostsData } from '../types/types'
 
 export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData()
@@ -12,23 +11,23 @@ export const getStaticProps = async () => {
   }
 } 
 
-const IndexPage = ({ allPostsData }: Posts) => {
+const IndexPage = ({ allPostsData }: AllPostsData) => {
   return (
     <Layout title="Create React App" home>
-      <h1 className="text-4xl">
-        Read <Link href="/posts/first-post"><a>this page</a></Link> 
-      </h1>
-      <ul>
-        {allPostsData.map(({ id, date, title }) => (
-          <li key={id}>
-            {title}
-            <br/>
-            {id}
-            <br/>
-            {date}
-          </li>
-        ))}
-      </ul>
+      <section>
+        <h1 className="text-4xl mb-5">Blog</h1>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br/>
+              {id}
+              <br/>
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   )
 }

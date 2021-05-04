@@ -3,12 +3,12 @@ export type MatterData = {
   date: string
 }
 
-export type Post = {
+export type PostData = {
   id: string
   title: string
   date: string
 }
 
-export type Posts = {
-  allPostsData: Post[]
+export type AllPostsData = {
+  allPostsData: PostData[]
 }

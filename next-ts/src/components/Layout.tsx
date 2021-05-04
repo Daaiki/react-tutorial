@@ -13,7 +13,9 @@ const Layout: React.FC<Props> = ({ children, title, home }) => {
       <Head>
         <title>{(title ? `${title}` : '')}</title>
       </Head>
-      {children}
+      <div className="container mx-auto">
+        {children}
+      </div>
       {!home && (
         <Link href="/">
           <a>Back to Home</a>
