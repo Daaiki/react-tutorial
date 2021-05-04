@@ -17,11 +17,11 @@ const IndexPage = ({ allPostsData }: AllPostsData) => {
       <section>
         <h1 className="text-4xl mb-5">Blog</h1>
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+          {allPostsData.map(({ slug, date, title }) => (
+            <li key={slug}>
               {title}
               <br/>
-              {id}
+              {slug}
               <br/>
               {date}
             </li>

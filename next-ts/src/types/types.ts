@@ -4,11 +4,21 @@ export type MatterData = {
 }
 
 export type PostData = {
-  id: string
+  slug: string
   title: string
   date: string
 }
 
+export type Post = {
+  postData: PostData
+}
+
 export type AllPostsData = {
   allPostsData: PostData[]
+}
+
+export type Params = {
+  params: {
+    slug: string
+  }
 }
