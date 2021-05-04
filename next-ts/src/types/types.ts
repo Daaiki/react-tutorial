@@ -10,7 +10,12 @@ export type PostData = {
 }
 
 export type Post = {
-  postData: PostData
+  postData: {
+    slug: string
+    contentHtml: string
+    title: string
+    date: string
+  }
 }
 
 export type AllPostsData = {
