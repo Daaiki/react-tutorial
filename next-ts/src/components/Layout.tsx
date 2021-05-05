@@ -7,7 +7,7 @@ type Props = {
   home?: boolean
 }
 
-const Layout: React.FC<Props> = ({ children, title, home }) => {
+export const Layout: React.FC<Props> = ({ children, title, home }) => {
   return (
     <>
       <Head>
@@ -24,5 +24,3 @@ const Layout: React.FC<Props> = ({ children, title, home }) => {
     </>
   )
 }
-
-export default Layout

@@ -1,4 +1,6 @@
-import Layout from '../components/Layout'
+import Link from 'next/link'
+import { Date } from '../components/date'
+import { Layout } from '../components/Layout'
 import { getSortedPostsData } from '../lib/posts'
 import { AllPostsData } from '../types/types'
 
@@ -19,11 +21,15 @@ const IndexPage = ({ allPostsData }: AllPostsData) => {
         <ul>
           {allPostsData.map(({ slug, date, title }) => (
             <li key={slug}>
-              {title}
+              <Link href={`/posts/${slug}`}>
+                <a>
+                  {title}
+                </a>
+              </Link>
               <br/>
-              {slug}
-              <br/>
-              {date}
+              <small className="text-gray-400">
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>

@@ -27,3 +27,7 @@ export type Params = {
     slug: string
   }
 }
+
+export type DateString = {
+  dateString: string
+}

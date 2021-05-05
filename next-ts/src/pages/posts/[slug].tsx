@@ -1,4 +1,5 @@
-import Layout from '../../components/Layout'
+import { Layout } from '../../components/Layout'
+import { Date } from '../../components/date'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { Params, Post } from '../../types/types'
 
@@ -23,11 +24,11 @@ export const getStaticProps = async ({ params }: Params) => {
 const PostPage = ({ postData }: Post) => {
   return (
     <Layout title={`${postData.title}`}>
-      <h1>{postData.title}</h1>
+      <h1 className="font-bold text-4xl mt-5">{postData.title}</h1>
       <br/>
-      <small>{postData.slug}</small>
-      <br/>
-      {postData.date}
+      <div className="text-gray-400">
+        <Date dateString={postData.date} />
+      </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   )
